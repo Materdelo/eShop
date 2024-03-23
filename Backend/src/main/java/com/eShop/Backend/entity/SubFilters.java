@@ -11,7 +11,7 @@ public class SubFilters {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idSubfilters;
+    private Long idSubfilters;
 
     private String subfilterName;
 }

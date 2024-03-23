@@ -2,6 +2,7 @@ package com.eShop.Backend.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Date;
 
@@ -12,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer userId;
+    private Long userId;
     private String userName;
     private String userSurname;
     private Date DOB;
