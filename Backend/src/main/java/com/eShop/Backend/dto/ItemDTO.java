@@ -1,20 +1,15 @@
-package com.eShop.Backend.entity;
+package com.eShop.Backend.dto;
 
-import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-@Data
-@Table(name = "items")
-@Entity
-public class Item {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Data
+public class ItemDTO implements Serializable {
     private Long itemId;
-    //zmiana do przechowywania wszystkich filtrow
     private List<String> filters;
     private String itemCondition;
     private String itemName;
@@ -22,5 +17,4 @@ public class Item {
     private Date itemPostDate;
     private String itemPostEnd;
     private String auctionType;
-
 }
